@@ -9,7 +9,6 @@ import * as authConstants from '../constants/auth';
 import { AppContextProvider } from '../context/App';
 import Header from '../components/Header';
 import LandingPage from '../pages/LandingPage';
-import CustomTypeForm from "../pages/Typeform";
 
 function Navigation () {
     const auth = {
@@ -26,7 +25,6 @@ function Navigation () {
                     <Header/>
                     <Switch>
                         <SecureRoute exact path='/' component={LandingPage} />
-                        <Route path='/typeform' component={CustomTypeForm} />
                         <Route path={authConstants.IMPLICIT_CALLBACK_URL} component={LoginCallback} />
                     </Switch>
                 </AppContextProvider>
